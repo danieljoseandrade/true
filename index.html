@@ -1,0 +1,62 @@
+﻿<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="./resources/ol.css">
+        <link rel="stylesheet" href="./resources/ol3-layerswitcher.css">
+        <link rel="stylesheet" href="./resources/qgis2web.css">
+        <style>
+        html, body {
+            background-color: #d9d4d4;
+        }
+        </style>
+        <style>
+        html, body, #map {
+            width: 100%;
+            height: 85%;
+            padding: 0px;
+            margin: 0px;
+            background: url("./images/image.gif") 50% 50% no-repeat white;
+            background-color: rgb(235,230,230);
+
+        }
+        </style>
+        <title>Saúde</title>
+    </head>
+    <body>
+        <div id="loader" class="loader">
+            <picture>
+            <source media= "(min-widht: 1024px)" scrset= "logotipo.png">
+            <img src="./images/logotipo.png"> <a href="https://www.observatoriodovale.net.br/"> </a> </picture>
+        <button class="botao"> <a href="https://www1.univap.br/observatoriormvale/observatorio/websig/437000/index.html">Território</a></button>
+        <button class="botao"> <a href="https://www1.univap.br/observatoriormvale/observatorio/websig/qgis2web_2017_09_12_11_58_42_023000/index.html">Indicadores</a></button>
+        <button class="botao"><a href="https://www1.univap.br/observatoriormvale/observatorio/websig/qgis2web_2017_09_13_11_47_55_528000/index.html">Físico</a></button>
+        <button class="botao"> <a href="https://www1.univap.br/observatoriormvale/observatorio/websig/qgis2web_2017_09_20_14_22_52_653000/index.html">Demográfico</a></button>
+        <button class="botao"> <a href="https://www1.univap.br/observatoriormvale/observatorio/websig/qgis2web_2017_09_20_17_47_39_305000/index.html">Planejamento</a></button>
+        <button class="botao"> <a href="https://www1.univap.br/observatoriormvale/observatorio/websig/qgis2web_2017_11_12-12_47_46_530000/index.html">Saúde</a></button>
+        <button class="botao"> <a href="https://www1.univap.br/observatoriormvale/observatorio/websig/qgis2web_2019_05_09-16_08_55_961000/index.html">Região 3D</a></span>
+        <button class="botao"> <a href="https://www1.univap.br/observatoriormvale/observatorio/websig/qgis2web_2017_09_13_11_47_55_528000/index2.html">Glossário/Fontes</a></button>
+        <button class="botao"> <a href="http://obsrmvpln.wixsite.com/observatoriormvpln/sig"> <img src="./images/undo.png" width="20" height="10"> <a href="http://obsrmvpln.wixsite.com/observatoriormvpln/sig">Voltar</a></button>
+      
+            <div id="map">
+            <div id="popup" class="ol-popup">
+                <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                <div id="popup-content"></div>
+        <script src="resources/qgis2web_expressions.js"></script>
+        <script src="resources/polyfills.js"></script>
+        <script src="./resources/rbush.min.js"></script>
+        <script src="./resources/labelgun.min.js"></script>
+        <script src="./resources/functions.js"></script>
+        <script src="./resources/ol.js"></script>
+        <script src="./resources/ol3-layerswitcher.js"></script>
+        <script src="layers/Taxademortalidadeinfantilbitosdemenoresde1ano1000nascidosvivosporregies_0.js"></script><script src="layers/Taxademortalidadeinfantilbitosdemenoresde1ano1000nascidosvivos_1.js"></script><script src="layers/Taxademortalidadetotalporneoplasiaspor100milhabitantesporregies_2.js"></script><script src="layers/Taxademortalidadetotalporneoplasiaspor100milhabitantes_3.js"></script><script src="layers/Taxademortalidadepordoenadoaparelhocirculatrioporregies_4.js"></script><script src="layers/Taxademortalidadepordoenadoaparelhocirculatrio_5.js"></script><script src="layers/Taxademortalidadeporcausasexternasporregies_6.js"></script><script src="layers/Taxademortalidadeporcausasexternas_7.js"></script><script src="layers/Percentualdenascidosvivoscom7oumaisconsultasdeprnatalporregies_8.js"></script><script src="layers/Percentualdenascidosvivoscom7oumaisconsultasdeprnatal_9.js"></script><script src="layers/Percentualnascidosvivoscombaixopesaoaonascermenorque25kgporregies_10.js"></script><script src="layers/Percentualnascidosvivoscombaixopesaoaonascermenorque25kg_11.js"></script><script src="layers/Percentualnascidosvivosdemescommenosde20anosporregies_12.js"></script><script src="layers/Percentualnascidosvivosdemescommenosde20anos_13.js"></script><script src="layers/LeitosSUSpor1000habitantesporregies_14.js"></script><script src="layers/LeitosSUSpor1000habitantes_15.js"></script><script src="layers/PercentualdapopulaocobertaporequipesdeatenobsicaSUSporregies_16.js"></script><script src="layers/PercentualdapopulaocobertaporequipesdeatenobsicaSUS_17.js"></script><script src="layers/Percentualdapopulaocomplanodesadeporregies_18.js"></script><script src="layers/Percentualdapopulaocomplanodesade_19.js"></script><script src="layers/DespesaemsadepercapitaRmdiaporregies_20.js"></script><script src="layers/DespesaemsadepercapitaR_21.js"></script><script src="layers/Regiesdelimitadasporcritriosdareadasade_22.js"></script><script src="layers/Tipologiadosmunicpiosnareadasade_23.js"></script><script src="layers/Sedes_municipais_24.js"></script>
+        <script src="styles/Taxademortalidadeinfantilbitosdemenoresde1ano1000nascidosvivosporregies_0_style.js"></script><script src="styles/Taxademortalidadeinfantilbitosdemenoresde1ano1000nascidosvivos_1_style.js"></script><script src="styles/Taxademortalidadetotalporneoplasiaspor100milhabitantesporregies_2_style.js"></script><script src="styles/Taxademortalidadetotalporneoplasiaspor100milhabitantes_3_style.js"></script><script src="styles/Taxademortalidadepordoenadoaparelhocirculatrioporregies_4_style.js"></script><script src="styles/Taxademortalidadepordoenadoaparelhocirculatrio_5_style.js"></script><script src="styles/Taxademortalidadeporcausasexternasporregies_6_style.js"></script><script src="styles/Taxademortalidadeporcausasexternas_7_style.js"></script><script src="styles/Percentualdenascidosvivoscom7oumaisconsultasdeprnatalporregies_8_style.js"></script><script src="styles/Percentualdenascidosvivoscom7oumaisconsultasdeprnatal_9_style.js"></script><script src="styles/Percentualnascidosvivoscombaixopesaoaonascermenorque25kgporregies_10_style.js"></script><script src="styles/Percentualnascidosvivoscombaixopesaoaonascermenorque25kg_11_style.js"></script><script src="styles/Percentualnascidosvivosdemescommenosde20anosporregies_12_style.js"></script><script src="styles/Percentualnascidosvivosdemescommenosde20anos_13_style.js"></script><script src="styles/LeitosSUSpor1000habitantesporregies_14_style.js"></script><script src="styles/LeitosSUSpor1000habitantes_15_style.js"></script><script src="styles/PercentualdapopulaocobertaporequipesdeatenobsicaSUSporregies_16_style.js"></script><script src="styles/PercentualdapopulaocobertaporequipesdeatenobsicaSUS_17_style.js"></script><script src="styles/Percentualdapopulaocomplanodesadeporregies_18_style.js"></script><script src="styles/Percentualdapopulaocomplanodesade_19_style.js"></script><script src="styles/DespesaemsadepercapitaRmdiaporregies_20_style.js"></script><script src="styles/DespesaemsadepercapitaR_21_style.js"></script><script src="styles/Regiesdelimitadasporcritriosdareadasade_22_style.js"></script><script src="styles/Tipologiadosmunicpiosnareadasade_23_style.js"></script><script src="styles/Sedes_municipais_24_style.js"></script>
+        <script src="./layers/layers.js" type="text/javascript"></script> 
+        <script src="./resources/qgis2web.js"></script>
+        <script src="./resources/Autolinker.min.js"></script>
+        </body>
+</html>
